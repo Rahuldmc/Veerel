@@ -1,5 +1,5 @@
 /* General Styles */
-.products-container {
+.products-container, .product-list {
     background-color: #1e1e2e; /* Dark background */
     color: white;
     padding: 40px 20px;
@@ -14,8 +14,11 @@
   
   /* Category Cards */
   .category-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Dynamic grid with auto-adjusting columns */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));  */
     gap: 20px;
     margin-bottom: 30px;
     justify-items: center; /* Align items horizontally at the center */
@@ -24,6 +27,7 @@
   .category-card {
     background-color: #333;
     border-radius: 10px;
+    width: 280px;
     height: 330px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -49,16 +53,19 @@
   
   /* Product Cards */
   .product-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Dynamic grid for product cards */
+    display: flex;
+    flex-direction: row;
     gap: 20px;
     margin-top: 20px;
-    justify-items: center; /* Align items horizontally at the center */
+    justify-content: center; 
+    align-items: center;
+    justify-items: center;
   }
   
   .product-card {
     background-color: #333;
     border-radius: 10px;
+    width: 280px;
     height: 330px;
     overflow: hidden;
     text-align: center;
@@ -167,21 +174,43 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .category-cards {
+      display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width for smaller screens */
+      gap: 20px;
+
+    }
+
+    .category-card{
+      width: 200px;
+      
     }
   
     .product-cards {
+      display: grid;
+      gap: 20px;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust product cards for small screens */
+    }
+
+    .product-card{
+      width: 200px;
     }
   }
   
-  @media (max-width: 425px) {
+  @media (max-width: 426px) {
     .category-cards {
       grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+
+    .category-card{
+      width: 330px;
     }
   
     .product-cards {
       grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+
+    .product-card{
+      width: 330px;
     }
   }
   

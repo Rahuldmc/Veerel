@@ -49,7 +49,7 @@
 .mobile-menu-icon {
   display: none;
   cursor: pointer;
-  z-index: 1100; /* Ensure close button is always on top */
+  z-index: 1300; /* Ensure close button is always on top */
 }
 
 /* Navigation Links */
@@ -112,7 +112,7 @@
 }
 
 /* Responsive Navbar Styles */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .nav-links {
       display: none; /* Hide desktop links */
   }
