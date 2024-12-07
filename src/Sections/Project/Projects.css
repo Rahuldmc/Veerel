@@ -1,0 +1,368 @@
+/* General Styles */
+.project-gallery {
+    position: relative;
+    width: 100%;
+    padding: 40px 20px;
+    color: white;
+    background: rgba(30, 30, 46, 0.9); /* Dark overlay for contrast */
+    overflow: hidden;
+  }
+  
+  /* Background Video with Parallax */
+ /* Common Background Video Centering with Parallax Effect */
+.bgvid-parallax {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%) translateZ(-1px) scale(1); 
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+  /* Header Styles */
+  .project-gallery-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .project-gallery-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .project-gallery-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Projects Grid */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Project Card */
+  .project-card {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Carousel Styles */
+  .project-carousel {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .project-carousel-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Project Details */
+  .project-details {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+    justify-content: center; /* Vertically center content */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+  }
+  
+  .project-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .view-more-button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-more-button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Modal Content */
+  .project-modal .ant-modal-content {
+    background-color: #1e1e2e;
+    color: white;
+    padding: 20px;
+    max-width: 100%; /* Prevent overflow */
+    margin: 0 auto; /* Center the modal horizontally */
+  }
+  
+  .project-modal .ant-modal-header {
+    background-color: #1e1e2e;
+    border-bottom: none;
+  }
+  
+  .project-modal .ant-modal-title {
+    color: #f39c12;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .project-modal .modal-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f39c12;
+  }
+  
+  .modal-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #cccccc;
+  }
+  
+  .modal-carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  /* Change the color of the close (X) icon in the modal */
+.project-modal .ant-modal-close {
+    color: white; /* Change the close button (X) color to white */
+  }
+  
+.project-modal .ant-modal-close:hover {
+color: #f39c12; /* Optional: Add hover effect to change the color when the user hovers over the close button */
+}
+  
+  /* Responsive Design */
+  
+  /* Large Screens */
+  @media (max-width: 1024px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .project-modal .ant-modal {
+      width: 85%; /* Slightly smaller modal for large screens */
+    }
+  
+    .project-modal .modal-content h3 {
+      font-size: 1.4rem;
+    }
+  
+    .project-modal .modal-content p {
+      font-size: 1rem;
+    }
+  
+    /* Project details for larger screens */
+    .project-details {
+      padding: 25px;
+    }
+  
+    .project-details h2 {
+      font-size: 1.6rem;
+    }
+  
+    .project-details p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    .project-gallery-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .project-gallery-header p {
+      font-size: 1rem;
+    }
+  
+    .project-modal .ant-modal-content {
+        width: 90%; /* Smaller modal width for tablets */
+        height: 500px;
+        margin: 0 auto;
+      }
+  
+    .project-modal .modal-content h3 {
+      font-size: 1.3rem;
+    }
+  
+    .project-modal .modal-content p {
+      font-size: 1rem;
+    }
+  
+    /* Project details for tablets */
+    .project-details {
+        padding: 110px 10px 30px 10px;
+    }
+  
+    .project-details h2 {
+      font-size: 1.4rem;
+    }
+  
+    .project-details p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Mobile L and smaller screens (425px and below) */
+  @media (max-width: 426px) {
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 20px; /* Increased gap for better spacing */
+      padding: 15px; /* Add padding to avoid edges */
+    }
+  
+    .project-card {
+      width: 100%; /* Full width of the container */
+      margin: 0 auto; /* Center the card */
+      padding: 10px; /* Add padding inside the card */
+      box-sizing: border-box; /* Include padding in width/height calculations */
+    }
+  
+    .project-gallery-header h1 {
+      font-size: 2rem; /* Adjust heading size */
+      margin-bottom: 10px; /* Add space below the heading */
+      text-align: center;
+    }
+  
+    .project-gallery-header p {
+      font-size: 1rem; /* Adjust paragraph size */
+      line-height: 1.5; /* Improve text spacing */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .project-details h2 {
+      font-size: 1.4rem; /* Adjust title font size */
+      margin-bottom: 10px;
+    }
+  
+    .project-details p {
+      font-size: 0.9rem; /* Adjust description font size */
+      line-height: 1.4;
+    }
+  
+    .view-more-button {
+      font-size: 0.9rem; /* Smaller button text */
+      padding: 10px 15px; /* Adjust button padding */
+      margin: 10px auto; /* Center the button */
+    }
+  
+    /* Project details for smaller mobile */
+    .project-details {
+      padding: 120px 10px 10px 10px
+    }
+  
+    .project-details h2 {
+      font-size: 1.3rem;
+    }
+  
+    .project-details p {
+      font-size: 0.9rem;
+    }
+  
+    /* Modal for mobile */
+    .project-modal .ant-modal {
+      width: 95%; /* Full width for mobile */
+      margin: 0 auto; /* Center the modal */
+    }
+  
+    .project-modal .modal-content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .project-modal .modal-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Very Small Mobile (375px and below) */
+  @media (max-width: 375px) {
+    .projects {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 10px; /* Slightly smaller gap for tighter screens */
+    }
+  
+    .project-card {
+      width: 100%; /* Full width of container */
+      margin: 0 auto; /* Center the card */
+    }
+  
+    .project-gallery-header h1 {
+      font-size: 1.8rem; /* Slightly smaller heading size */
+    }
+  
+    .project-gallery-header p {
+      font-size: 0.8rem; /* Smaller paragraph size for narrow screens */
+    }
+  
+    .modal-content h3 {
+      font-size: 1.2rem; /* Reduce modal heading size */
+    }
+  
+    .modal-content p {
+      font-size: 0.9rem; /* Reduce modal description size */
+    }
+  
+    /* Project details for very small mobile */
+    .project-details {
+      padding: 120px 10px 10px 10px
+    }
+  
+    .project-details h2 {
+      font-size: 1.2rem;
+    }
+  
+    .project-details p {
+      font-size: 0.85rem;
+    }
+  
+    /* Modal for very small mobile */
+    .project-modal .ant-modal {
+      width: 95%; /* Full width of container */
+      margin: 0 auto; /* Center the modal */
+    }
+  }
+  
+
+
+
+
+
+
+

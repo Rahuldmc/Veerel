@@ -1,0 +1,246 @@
+/* General Styling */
+.history-section {
+    background-color: #1e1e2e;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .history-header h1 {
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .history-header p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Content Layout */
+  .history-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .history-graphic {
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(243, 156, 18, 0.5));
+  }
+  
+  /* Stats Section */
+  .history-stat-horizontal {
+    flex: 1 1 auto;
+    max-width: 20%;
+    min-width: 200px; /* Minimum width for consistent card sizing */
+    height: 250px; /* Fixed height for uniformity */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .history-stat-horizontal:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Ensure consistency across screen sizes */
+  .history-stats-horizontal {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Stretch cards to maintain equal height */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px;
+  }
+  
+  .history-stat-horizontal h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #f39c12;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .history-stat-horizontal p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 5px 0 0;
+  }
+  
+  .history-stat-horizontal svg {
+    margin-bottom: 10px;
+  }
+  
+
+  /* Hover Effects for Stats Cards */
+.history-stat-horizontal {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .history-stat-horizontal:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    z-index: 1; /* Bring card to the front on hover */
+  }
+  
+  .history-stat-horizontal h2 {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .history-stat-horizontal:hover h2 {
+    transform: scale(1.2); /* Slight zoom effect for numbers */
+    color: #f39c12; /* Highlight color for the numbers */
+  }
+  
+  /* Responsive Design */
+
+/* Tablet/iPad: 2x2 Grid Layout */
+@media (max-width: 1024px) {
+    .history-stats-horizontal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .history-stat-horizontal {
+      flex: 1 1 auto;
+      max-width: 100%;
+      min-width: 150px;
+      height: 200px;
+    }
+  
+    .history-header h1 {
+      font-size: 2rem;
+    }
+  
+    .history-header p {
+      font-size: 1rem;
+    }
+  
+    .history-stat-horizontal h2 {
+      font-size: 2rem;
+    }
+  
+    .history-graphic {
+      max-width: 300px;
+    }
+  }
+  
+  /* Mobile: Vertical Layout */
+  @media (max-width: 768px) {
+    .history-stats-horizontal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+  
+    .history-stat-horizontal {
+      flex: 1 1 auto;
+      max-width: 100%; /* Full width of the grid column */
+      min-width: 150px; /* Minimum width for consistent card sizing */
+      height: 200px;
+    }
+  
+    .history-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .history-header p {
+      font-size: 0.9rem;
+    }
+  
+    .history-stat-horizontal h2 {
+      font-size: 1.8rem;
+    }
+  
+    .history-graphic {
+      max-width: 250px;
+    }
+  }
+  
+  /* Small Mobile: Stacked Vertical Layout */
+  @media (max-width: 425px) {
+    .history-stats-horizontal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .history-stat-horizontal {
+      width: 90%; /* Cards take 90% of the viewport width */
+      min-width: 200px;
+      height: 180px;
+    }
+  
+    .history-header h1 {
+      font-size: 1.6rem;
+    }
+  
+    .history-header p {
+      font-size: 0.8rem;
+    }
+  
+    .history-stat-horizontal h2 {
+      font-size: 1.6rem;
+    }
+  
+    .history-graphic {
+      max-width: 220px;
+    }
+  }
+  
+  /* Extra Small Mobile: Fully Stacked Layout */
+  @media (max-width: 375px) {
+    .history-stats-horizontal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .history-stat-horizontal {
+      width: 100%; /* Cards occupy full width */
+      min-width: 180px;
+      height: 150px; /* Adjust height for smaller screens */
+    }
+  
+    .history-header h1 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  
+    .history-header p {
+      font-size: 0.75rem;
+      text-align: center;
+    }
+  
+    .history-stat-horizontal h2 {
+      font-size: 1.4rem;
+    }
+  
+    .history-graphic {
+      max-width: 180px;
+      margin: 0 auto;
+    }
+  }
+  

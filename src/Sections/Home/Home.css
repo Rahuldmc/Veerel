@@ -1,0 +1,290 @@
+/* General Styles */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Parallax Effect for Background Video */
+.bgvid {
+  position: fixed; /* Fixed to viewport for parallax effect */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
+  transform: translateY(0px); /* Default position */
+  transition: transform 0.1s ease-out; /* Smooth transition */
+  will-change: transform;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6); /* Slight transparency */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  z-index: 1100; /* Ensure close button is always on top */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li {
+  font-size: 1rem;
+  cursor: pointer; /* Add cursor pointer on each navbar item */
+}
+
+/* Ensure navbar links show pointer on hover */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Add pointer cursor to navbar links */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f39c12; /* Highlight color for active and hover links */
+}
+
+/* Mobile Navigation Menu */
+.nav-links-mobile-open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 2rem;
+  gap: 2rem;
+  z-index: 1100;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links-mobile-open li {
+  font-size: 1.2rem; /* Slightly larger text for mobile */
+  cursor: pointer; /* Add cursor pointer to mobile menu items */
+}
+
+.nav-links-mobile-open li a {
+  color: #fff;
+  font-weight: normal;
+  cursor: pointer; /* Add cursor pointer to links in mobile menu */
+}
+
+.nav-links-mobile-open li a:hover,
+.nav-links-mobile-open li a.active {
+  color: #f39c12;
+}
+
+/* Responsive Navbar Styles */
+@media (max-width: 1024px) {
+  .nav-links {
+      display: none; /* Hide desktop links */
+  }
+
+  .mobile-menu-icon {
+      display: block; /* Show mobile menu button */
+  }
+
+  .nav-links-mobile-open {
+      display: flex; /* Show mobile menu on open */
+  }
+}
+
+/* Main Content */
+.content {
+  text-align: center;
+  color: #fff;
+  z-index: 5;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Carousel Section */
+.carousel {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 20px;
+  height: 25vh; /* Allow carousel to adjust height based on content */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Carousel Text */
+.carousel-slide h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #f39c12;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  padding: 0 10px; /* Added padding to prevent overflow on smaller screens */
+}
+
+.carousel-slide p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  max-width: 80%; /* Limit the width to prevent the text from stretching too much */
+  margin: 0 auto;
+  padding: 0 10px; /* Added padding for smaller screens */
+}
+
+/* Supporting Text */
+.subtext {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  max-width: 90%; /* Limit the width for better readability */
+  margin: 20px auto;
+  padding: 0 10px; /* Added padding for smaller screens */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background-color: #f39c12;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #f39c12;
+}
+
+/* Mobile-Responsive Adjustments */
+@media (max-width: 1024px) {
+  /* Adjusting Carousel Text for Tablets and Small Screens */
+  .carousel-slide h1 {
+      font-size: 2.5rem;
+  }
+
+  .carousel-slide p {
+      font-size: 1.1rem;
+  }
+
+  .subtext {
+      font-size: 1.1rem;
+  }
+
+  /* Adjust Call-to-Action Button for Tablet Screens */
+  .cta-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+  }
+}
+
+/* Small Devices: Phones */
+@media (max-width: 768px) {
+  .content {
+      padding: 15px; /* Reduce padding for small screens */
+      flex-direction: column;
+  }
+
+  .carousel,.ant-carousel {
+      width: 100%;
+      height: 25vh;
+  }
+
+  /* Adjust Carousel Text */
+  .carousel-slide h1 {
+      font-size: 2rem;
+  }
+
+  .carousel-slide p {
+      font-size: 1rem;
+  }
+
+  /* Adjust Supporting Text */
+  .subtext {
+      font-size: 1rem;
+      margin-bottom: 30px;
+  }
+
+  /* Adjust Button */
+  .cta-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+  }
+}
+
+/* Very Small Screens (e.g., Phones in Portrait) */
+@media (max-width: 480px) {
+  .content {
+      padding: 10px;
+      width: 100%;
+  }
+  .carousel,.ant-carousel {
+      width: 100%;
+      height: 30vh;
+  }
+
+  /* Adjust Carousel Text */
+  .carousel-slide h1 {
+      font-size: 1.8rem;
+  }
+
+  .carousel-slide p {
+      font-size: 0.9rem;
+  }
+
+  /* Adjust Supporting Text */
+  .subtext {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+  }
+
+  /* Adjust Button */
+  .cta-button {
+      padding: 8px 16px;
+      font-size: 0.8rem;
+  }
+}

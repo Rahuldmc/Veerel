@@ -1,0 +1,131 @@
+/* General Styles for Clients Section */
+.clients-container {
+    position: relative;
+    width: 100%;
+    padding: 40px 20px;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Background Video */
+  /* Background Video with Parallax Effect */
+/* Common Background Video Centering with Parallax Effect */
+.bgvid-parallax {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: brightness(50%);
+    z-index: -1; 
+  }
+
+  
+  /* Clients Header */
+  .clients-header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Clients Grid Layout */
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Client Logo Styling */
+  .client-logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Standard size for logos */
+    height: 150px; /* Maintain equal height */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .client-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
+  
+  .client-logo:hover img {
+    opacity: 0.7;
+  }
+  
+  /* Client Name - Hover Fade-In */
+  .client-name {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f39c12;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .client-logo:hover .client-name {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .clients-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .clients-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  
+    .client-logo {
+      width: 120px; /* Slightly smaller logos for tablets */
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 426px) {
+    .clients-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for mobile screens */
+      gap: 15px;
+    }
+  
+    .client-logo {
+      width: 100px; /* Smaller logos for mobile */
+      height: 100px;
+    }
+  
+    .client-name {
+      font-size: 0.9rem; /* Smaller client name */
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .clients-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+      gap: 10px;
+    }
+  
+    .client-logo {
+      width: 80px; /* Even smaller logos for very small screens */
+      height: 80px;
+    }
+  }
+  
