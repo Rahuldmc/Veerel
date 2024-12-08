@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Products.css"
 
 const ContactForm = ({ selectedProduct, closeModal }) => {
   const [formData, setFormData] = useState({

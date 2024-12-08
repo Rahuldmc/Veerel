@@ -5,6 +5,7 @@ import A1 from "../../Assets/A1.jpg";
 import A2 from "../../Assets/A2.jpg";
 import A3 from "../../Assets/A3.jpg";
 import A4 from "../../Assets/A4.jpg";
+import ProductsList from './ProductsList';
 
 const categories = [
   { id: 1, name: "Simulators", products: [
@@ -58,17 +59,7 @@ const categories = [
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState(null);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-
-  const handleEnquireClick = (category, product) => {
-    setSelectedProduct({ category, product });
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
+ 
 
   return (
     <div className="products-container">
@@ -89,36 +80,10 @@ const Products = () => {
           </div>
         ))}
       </div>
-      
-      {activeCategory && (
-        <div className="product-list">
-          <h2>{categories.find(cat => cat.id === activeCategory).name} Products</h2>
-          <div className="product-cards">
-            {categories.find(cat => cat.id === activeCategory).products.map((product, index) => (
-              <div key={index} className="product-card" data-aos="fade-up" data-aos-duration="1000">
-                <img src={product.img} alt={product.name} className="product-image"/>
-                <div className='product-content'>
-                <h3>{product.name}</h3>
-                <button 
-                  className="enquire-button" 
-                  onClick={() => handleEnquireClick(categories.find(cat => cat.id === activeCategory).name, product.name)}
-                >
-                  Enquire
-                </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <ContactForm selectedProduct={selectedProduct} closeModal={closeModal} />
-          </div>
-        </div>
-      )}
+      {
+      activeCategory && 
+      <ProductsList activeCategory={activeCategory} categories={categories}/>
+      }
     </div>
   );
 };

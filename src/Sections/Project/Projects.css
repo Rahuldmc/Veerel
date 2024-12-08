@@ -111,6 +111,10 @@
   
   /* Modal Content */
   .project-modal .ant-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #1e1e2e;
     color: white;
     padding: 20px;
@@ -302,6 +306,10 @@ color: #f39c12; /* Optional: Add hover effect to change the color when the user 
       margin: 0 auto; /* Center the modal */
     }
   
+    .project-modal .modal-content {
+      height: 420px;
+      width: 350px;
+    }
     .project-modal .modal-content h3 {
       font-size: 1.2rem;
     }
@@ -312,7 +320,7 @@ color: #f39c12; /* Optional: Add hover effect to change the color when the user 
   }
   
   /* Very Small Mobile (375px and below) */
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     .projects {
       grid-template-columns: 1fr; /* Single column layout */
       gap: 10px; /* Slightly smaller gap for tighter screens */
@@ -321,6 +329,10 @@ color: #f39c12; /* Optional: Add hover effect to change the color when the user 
     .project-card {
       width: 100%; /* Full width of container */
       margin: 0 auto; /* Center the card */
+    }
+
+    .project-modal .modal-content {
+      width: 300px;
     }
   
     .project-gallery-header h1 {

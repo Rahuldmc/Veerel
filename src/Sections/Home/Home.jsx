@@ -12,6 +12,7 @@ import Contact from "../Contact/Contact";
 import Products from "../Products/Products";
 import Clients from "../Clients/Clients";
 import Footer from "../Footer/Footer";
+import ProductsList from "../Products/ProductsList";
 
 const Home = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
