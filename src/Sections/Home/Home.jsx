@@ -41,7 +41,7 @@ const Home = () => {
   const carouselContent = [
     {
       title: "Illuminate",
-      text: "We create awe-inspiring visual experiences that transform spaces and captivate audiences.",
+      text: "We create awe-inspiring visual experiences that transform spaces and mesmerize audiences.",
     },
     {
       title: "Captivate",
@@ -122,8 +122,8 @@ const Home = () => {
 
           {/* Supporting Text */}
           <p className="subtext">
-            Illuminate spaces, captivate minds, and resonate emotions with our
-            mastery of light, sound, and projection.
+          Illuminate Innovation, Captivate Experiences, Resonate Progress <br></br>
+          with Smart Solutions, Immersive Technology, and Tailored Experiences
           </p>
 
           {/* Call-to-Action Button */}

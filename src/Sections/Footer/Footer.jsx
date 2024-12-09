@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="footer-logo" onClick={handleLogoClick}>
           <img src={logo} alt="Logo" className="footer-logo-img" />
           <p className="footer-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquid ex modi nemo ab quasi iusto et provident, quam magni explicabo fuga sequi deserunt eveniet aut quidem velit voluptatum quae.
+            At <strong>Veerel Enterprises</strong>, we specialize in delivering cutting-edge, custom solutions across technology, simulation, software development, automation, and immersive experiences. Our expertise spans industries including public sector, corporate, government initiatives, and more, ensuring every project is tailored to meet unique client needs.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
 
       {/* Trademark Section */}
       <div className="footer-trademark">
-        <p>© 2024 Veerel. All rights reserved.</p>
+        <p>©{new Date().getFullYear() } <a href='www.veerelenterprises.com' style={{color:'#ccc', textDecoration:'none'}} >Veerel Enterprises.</a> All rights reserved.</p>
       </div>
     </div>
   );

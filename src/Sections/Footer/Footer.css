@@ -23,8 +23,9 @@
   }
   
   .footer-logo-img {
-    width: 120px;
+    width: 15vw;
     height: auto;
+    margin-right: 30px;
   }
   
   .footer-description {

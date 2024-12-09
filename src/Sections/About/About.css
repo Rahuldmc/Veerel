@@ -1,7 +1,7 @@
 /* General Styles */
 .about-us-page {
     background-color: #1e1e2e;
-    color: #f0f0f0;
+    color: #fafafa;
     font-family: "Arial", sans-serif;
     padding: 20px;
     line-height: 1.6;
@@ -19,8 +19,8 @@
   
   .about-header p {
     font-size: 1.2rem;
-    color: #aaa;
-    max-width: 800px;
+    color: #fafafa;
+    max-width: 80vw;
     margin: 0 auto;
   }
   
@@ -59,7 +59,7 @@
   
   .usp-content {
     text-align: center;
-    max-width: 500px;
+    max-width: 50vw;
   }
   
   .usp-icon {
@@ -76,7 +76,7 @@
   
   .usp-content p {
     font-size: 1rem;
-    color: #ccc;
+    color: #fafafa;
   }
   
   /* Graphic Section */
@@ -116,7 +116,7 @@
   
   .graphic-text p {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #fafafa;
   }
   
   /* Responsive Design */
@@ -154,3 +154,21 @@
     }
   }
   
+
+  @media screen and (max-width: 480px) {
+    .about-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .usp-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .usp-content p {
+      font-size: 0.9rem;
+    }
+  
+    .animated-image {
+      max-width: 400px;
+    }
+  }

@@ -11,17 +11,17 @@ import A4 from "../../Assets/A4.jpg"
 // Example project data
 const projects = [
     {
-      title: "Project One",
-      client: "Client A",
+      title: "Driving Simulator",
+      client: "Indian Army",
       description:
-        "A groundbreaking project that transformed the industry. Delivering exceptional quality and innovative solutions tailored to the client's needs.",
+        "We developed a VR-based driving simulator for the Indian Army, offering a highly immersive training experience that replicates real-world driving conditions. By leveraging advanced VR technology, this solution enhances driving skills in a safe, controlled environment. Our innovative approach empowers military personnel with tailored, risk-free training, ensuring operational readiness and excellence in line with our mission to drive progress through cutting-edge solutions.",
       images: [
         A1,A2,A3,A4
     ],
     },
     {
-      title: "Project Two",
-      client: "Client B",
+      title: "Static Website",
+      client: "Lux and Decibels",
       description:
         "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
       images: [
@@ -29,7 +29,25 @@ const projects = [
       ],
     },
     {
-        title: "Project Two",
+        title: "Billing Software",
+        client: "Ayushri Silks",
+        description:
+          "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
+        images: [
+          A1,A2,A3,A4
+        ],
+      },
+      {
+        title: "Ticketing and Access Management",
+        client: "Lux and Decibels",
+        description:
+          "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
+        images: [
+          A1,A2,A3,A4
+        ],
+      },
+      {
+        title: "Patna Sahib Gurudwara",
         client: "Client B",
         description:
           "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
@@ -38,8 +56,8 @@ const projects = [
         ],
       },
       {
-        title: "Project Two",
-        client: "Client B",
+        title: "Madurai Railway Station",
+        client: "Indian Railways",
         description:
           "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
         images: [
@@ -47,8 +65,8 @@ const projects = [
         ],
       },
       {
-        title: "Project Two",
-        client: "Client B",
+        title: "Golconda Fort",
+        client: "APTDC",
         description:
           "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
         images: [
@@ -56,26 +74,8 @@ const projects = [
         ],
       },
       {
-        title: "Project Two",
-        client: "Client B",
-        description:
-          "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
-        images: [
-          A1,A2,A3,A4
-        ],
-      },
-      {
-        title: "Project Two",
-        client: "Client B",
-        description:
-          "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
-        images: [
-          A1,A2,A3,A4
-        ],
-      },
-      {
-        title: "Project Two",
-        client: "Client B",
+        title: "Coochebehar Palace",
+        client: "WBTDC",
         description:
           "Delivering unparalleled excellence and innovation. This project redefined the standards of the industry with cutting-edge designs.",
         images: [

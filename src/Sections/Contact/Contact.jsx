@@ -37,9 +37,9 @@ const Contact = () => {
 
           <div className="contact-info">
             <p className="info-title">Contact Information</p>
-            <p>Email: contact@company.com</p>
-            <p>Phone: +1 234 567 890</p>
-            <p>Address: 123 Main Street, City, Country</p>
+            <p>Email: <a href='mailto:support@veerelenterprises.com' style={{color:'white', textDecoration:'none'}}>support@veerelenterprises.com</a></p>
+            <p>Phone: <a href='tel:+919686940950' style={{color:'white', textDecoration:'none'}}>+91 96869 40950</a></p>
+            <p>Branches: <a href='https://maps.app.goo.gl/NFeLNvg7uEPsBmg58' style={{color:'white', textDecoration:'none'}}>Bangalore</a>, <a href='https://maps.app.goo.gl/ZTykYjk9x7Zr8Ej77' style={{color:'white', textDecoration:'none'}}>Chennai</a></p>
           </div>
         </div>
 
